@@ -9,9 +9,7 @@ export default function CustomerView() {
   useEffect(() => {
     let isMounted = true;
 
-    fetch(`${import.meta.env.VITE_API_URL}/products/active`, {
-      mode: 'no-cors'
-    })
+    fetch(`${import.meta.env.VITE_API_URL}/products/active`)
       .then((res) => res.json())
       .then((productsData) => {
         if (isMounted) {
